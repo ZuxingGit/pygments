@@ -366,7 +366,7 @@ class CppLexer(CFamilyLexer):
             (r'((?:' + CFamilyLexer._ident + r'(?:[&*\s])+)?)(~?' + CFamilyLexer._ident + r')'  #return type, destructor symbol and class name
              r'(\s*\([^;]*?\))'            # signature
              r'([^;{]*)(\{)',
-             bygroups(using(this), Name.Function, using(this), using(this),
+             bygroups(using(this), Name, using(this), using(this),
                       Punctuation),
              'function'),
             inherit,
